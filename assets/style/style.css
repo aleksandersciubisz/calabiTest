@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto+Slab:wght@100;200;300&display=swap');
+
+/*################################# CSS VARIABLES  #################################*/
+:root {
+  --header-height: 8vh;
+  --header-height-half: 4vh;
+  --responsive-section: 92vh;
+  --max-width: 1500px;
+  --min-width: 320px;
+  /* Colors */
+  --hue-dark: 210;
+  --hue-light: 0;
+  --dark-color: hsl(var(--hue-dark), 33%, 9%);
+  --dark-color-alt: hsl(var(--hue-dark), 33%, 14%);
+  --light-color: hsl(var(--hue-light), 0%, 94%);
+  --light-color-alt: hsl(var(--hue-light), 0%, 80%);
+  --mars-color: hsl(356, 66%, 45%);
+  --mars-color-alt: hsl(0, 60%, 50%);
+  --mars-color-dark: hsl(356, 99%, 26%);
+  --red-color: #ff0000;
+  --white-color: #fff;
+  --black-color: #000;
+
+  /* Fonts sizes */
+  --text-font: 'Roboto Slab', serif;
+  --headline-font: 'Orbitron', sans-serif;
+
+  --h1-size: clamp(2.617rem, 1.907rem + 3.5498vw, 5.235rem);
+  --h2-size: clamp(1.618rem, 1.1792rem + 2.1939vw, 3.236rem);
+
+  --normal-font: clamp(1rem, 0.7288rem + 1.3559vw, 2rem);
+  --small-font: clamp(0.8rem, 0.6818rem + 0.5912vw, 1.236rem);
+}
+
+/*################################# HTML LAYOUT  #################################*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  background-color: var(--black-color);
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 100%;
+  height: var(--header-height);
+  background: var(--black-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  background-color: var(--black-color);
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 50vh;
+  width: 100%;
+  background-color: var(--black-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light-color);
+}
+
+/*################################# TYPOGRAPHY  #################################*/
+h1,
+h2,
+header {
+  font-family: var(--headline-font);
+  color: var(--light-color);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: var(--h1-size);
+  width: 100%;
+  margin: 15px 0px;
+  letter-spacing: 0.1em;
+  color: var(--light-color);
+}
+
+h2 {
+  font-size: var(--h2-size);
+  width: 100%;
+  margin: 5px 0px;
+  letter-spacing: 0.05em;
+}
+
+p {
+  font-family: (var(--text-font));
+  font-size: var(--normal-font);
+  color: var(--light-color);
+  width: 100%;
+  letter-spacing: 0.05em;
+  margin: 5px 0px;
+}
+
+.italic {
+  font-style: italic;
+  letter-spacing: 0.07em;
+  font-size: var(--small-font);
+}
+
+/*################################# HOME SECTION #################################*/
+
+#home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: black no-repeat center center/cover;
+}
+
+.video-container video {
+  min-height: 100%;
+  min-width: 100%;
+  max-width: 99vw;
+  object-fit: cover;
+}
+
+.home-content {
+  padding: 1em;
+  z-index: 1;
+}
+/*################################# SECTION 1 #################################*/
+#section1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: var(--header-height) 10px;
+  height: auto;
+}
+
+#section1 > div {
+  height: auto;
+  min-height: 20vh;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: top;
+  opacity: 0.9;
+
+  transition: all 0.5s ease-in;
+}
+
+#section1 > div:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+#section1 > div:nth-of-type(1) {
+  grid-column: 1 / 3;
+}
+
+#section1 > div:nth-of-type(7) {
+  grid-column: 2 / 4;
+}
+
+.bg1 {
+  background: url('/assets/img/earth.jpeg');
+}
+
+.bg2 {
+  background: url('/assets/img/mars.jpeg');
+}
+
+.bg3 {
+  background: url('/assets/img/moon.jpeg');
+}
+
+/*################################# SECTION 2 #################################*/
+#section2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  padding: var(--header-height) 10px;
+  height: auto;
+}
+
+#section2 > div {
+  height: auto;
+  min-height: 20vh;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: top;
+  opacity: 0.9;
+
+  transition: all 0.5s ease-in;
+}
+
+#section2 > div:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+#section2 > div:nth-of-type(1) {
+  grid-column: 1 / 3;
+}
+
+#section2 > div:nth-of-type(4) {
+  grid-column: 1 / 3;
+}
+
+/*################################# SECTION 3 #################################*/
+#section3 {
+  display: flex;
+  flex-direction: row;
+  padding: var(--header-height) 10px;
+  height: auto;
+  min-height: 50vh;
+}
+
+.buttons,
+.objects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+}
+
+.buttons {
+  flex: 1;
+  align-items: flex-start;
+
+  height: auto;
+  padding: 10px;
+}
+
+.objects {
+  flex: 2;
+  align-items: center;
+
+  height: auto;
+}
+
+#main-image {
+  width: auto;
+  height: auto;
+  max-height: 50vh;
+}
+/*################################# SECTION 4 #################################*/
+
+#section4 {
+  height: 30vh;
+}
+
+/*################################# FOOTER #################################*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -4rem;
+  display: flex;
+  background-color: var(--black-color);
+
+  box-shadow: 0 3px 5px 0 rgba(255, 255, 255, 0.3);
+  padding: 0.45rem;
+  z-index: 100;
+  transition: 0.4s;
+}
+
+.scrollup:hover {
+  background-color: var(--mars-color-dark);
+  opacity: 1;
+}
+
+.scrollup-icon {
+  color: var(--light-color-alt);
+  font-size: 1.35rem;
+}
+
+.scrollup-icon:hover {
+  color: var(--mars-color);
+}
+
+/* Show Scroll Up*/
+.show-scroll {
+  bottom: 1rem;
+}
