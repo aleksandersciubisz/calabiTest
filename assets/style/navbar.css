@@ -52,7 +52,7 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   list-style: none;
   margin-right: 20px;
   justify-self: end;
@@ -89,7 +89,7 @@
 }
 
 /*################################# HAMBURGER MENU TRESHOLD  #################################*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .nav-container,
   header {
     background-color: var(--black-color);

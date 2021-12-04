@@ -71,7 +71,7 @@ main {
 
 section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: auto;
@@ -139,6 +139,10 @@ p {
   font-size: var(--small-font);
 }
 
+.left {
+  text-align: left;
+}
+
 /*################################# HOME SECTION #################################*/
 
 #home {
@@ -174,7 +178,44 @@ p {
   z-index: 1;
 }
 /*################################# SECTION 1 #################################*/
+
 #section1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  padding: var(--header-height) 10px;
+  width: 100%;
+  height: auto;
+}
+
+#section1 > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  height: auto;
+  min-height: 30vh;
+  padding: 10px;
+
+  opacity: 0.9;
+  transition: all 0.5s ease-in;
+
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#section1 img {
+  max-height: 120px;
+  width: auto;
+}
+
+#section1 > div:nth-of-type(1) {
+  grid-column: 1 / 3;
+}
+
+/* #section1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
@@ -218,10 +259,11 @@ p {
 
 .bg2 {
   background: url('/assets/img/mars.jpeg');
-}
+} */
 
 /*################################# SECTION 2 #################################*/
-#section2 {
+
+/* #section2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
@@ -260,9 +302,11 @@ p {
 
 .bg3 {
   background: url('/assets/img/moon.jpeg');
-}
+} */
 
 /*################################# SECTION 3 #################################*/
+
+/* 
 #section3 {
   display: flex;
   flex-direction: row;
@@ -305,10 +349,10 @@ p {
   #section3 {
     flex-direction: column;
   }
-}
+} */
 
 /*################################# SECTION 4 #################################*/
-
+/* 
 #section4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -364,7 +408,7 @@ p {
 #section4 > div:nth-of-type(6) {
   grid-column: 2/4;
   grid-row: 4/5;
-}
+} */
 
 /*################################# FOOTER #################################*/
 .scrollup {
@@ -393,4 +437,17 @@ p {
 /* Show Scroll Up*/
 .show-scroll {
   bottom: 1rem;
+}
+
+/*################################# Backgrounds #################################*/
+.bg1 {
+  background: url('/assets/img/earth.jpeg');
+}
+
+.bg2 {
+  background: url('/assets/img/mars.jpeg');
+}
+
+.bg3 {
+  background: url('/assets/img/moon.jpeg');
 }
