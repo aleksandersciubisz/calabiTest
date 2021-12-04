@@ -287,7 +287,15 @@ p {
   width: auto;
   height: auto;
   max-height: 50vh;
+  max-width: 100%;
 }
+
+@media screen and (max-width: 600px) {
+  #section3 {
+    flex-direction: column;
+  }
+}
+
 /*################################# SECTION 4 #################################*/
 
 #section4 {
