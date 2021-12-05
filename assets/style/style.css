@@ -184,8 +184,7 @@ p {
 #section0,
 #section1,
 #section2,
-#section3,
-#section5 {
+#section3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
@@ -197,8 +196,7 @@ p {
 #section0 > div,
 #section1 > div,
 #section2 > div,
-#section3 > div,
-#section5 > div {
+#section3 > div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -220,8 +218,7 @@ p {
 #section0 > div:hover,
 #section1 > div:hover,
 #section2 > div:hover,
-#section3 > div:hover,
-#section0 > div:hover {
+#section3 > div:hover {
   opacity: 1;
   transform: scale(0.98);
 }
@@ -571,6 +568,7 @@ p {
 #section5 {
   height: auto;
   min-height: 50vh;
+  justify-content: space-between;
 }
 
 #section5 > div {
@@ -579,10 +577,12 @@ p {
   text-align: center;
 
   margin: 2px;
-  border: solid 1px red;
 }
 
 /*------ Contact Form --------*/
+form {
+  margin-bottom: var(--header-height);
+}
 .feedback-input {
   color: var(--light-color);
   font-family: var(--text-font);
@@ -634,7 +634,7 @@ textarea {
 }
 
 .ft {
-  align-self: flex-end;
+  justify-self: flex-end;
 }
 
 .ft:hover {
