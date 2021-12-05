@@ -41,6 +41,29 @@ document.getElementById('img-button3').onclick = function () {
   document.getElementById('main-image').src = imgArray[2]
 }
 
+var imgArray2 = [
+  'assets/img/carousel/p2.PNG',
+
+  'assets/img/carousel/p1.PNG',
+  'assets/img/carousel/p3.jpeg',
+  'assets/img/carousel/p4.jpeg',
+]
+
+document.getElementById('img-button4').onclick = function () {
+  document.getElementById('main-image2').src = imgArray2[0]
+}
+document.getElementById('img-button5').onclick = function () {
+  document.getElementById('main-image2').src = imgArray2[1]
+}
+
+document.getElementById('img-button6').onclick = function () {
+  document.getElementById('main-image2').src = imgArray2[2]
+}
+
+document.getElementById('img-button7').onclick = function () {
+  document.getElementById('main-image2').src = imgArray2[3]
+}
+
 // Scroll Reveal Animation
 
 // const sr = ScrollReveal({

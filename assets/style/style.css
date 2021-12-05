@@ -283,18 +283,31 @@ p {
   height: auto;
   max-height: 500px;
 }
+
+#main-image2 {
+  align-self: center;
+  max-width: 600px;
+  height: auto;
+  max-height: 500px;
+}
+
 /* ---- grid manipulation ----*/
 #section1 > div:nth-of-type(1) {
   grid-column: 1 / 3;
 }
 
-#section1 > div:nth-of-type(10) {
+#section1 > div:nth-of-type(11) {
+  grid-column: 2;
+  grid-row: 6/9;
+}
+
+#section1 > div:nth-of-type(14) {
   grid-column: 1 / 3;
 }
 
-#section1 > div:nth-of-type(11) {
+#section1 > div:nth-of-type(15) {
   grid-column: 1;
-  grid-row: 7/9;
+  grid-row: 10/12;
 }
 
 /* #section1 > div:nth-of-type(1) {
@@ -762,4 +775,20 @@ textarea {
 
 .bg6 {
   background: url('/assets/img/carousel/prototype1.jpeg');
+}
+
+.pp1 {
+  background: url('/assets/img/carousel/p1.PNG');
+}
+
+.pp2 {
+  background: url('/assets/img/carousel/p2.PNG');
+}
+
+.pp3 {
+  background: url('/assets/img/carousel/p3.PNG');
+}
+
+.pp4 {
+  background: url('/assets/img/carousel/p4.PNG');
 }
