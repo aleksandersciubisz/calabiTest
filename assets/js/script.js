@@ -31,19 +31,19 @@ var imgArray = [
   'assets/img/a4.jpg',
 ]
 
-document.getElementById('img-button1').onclick = function () {
-  document.getElementById('main-image').src = imgArray[0]
-}
-document.getElementById('img-button2').onclick = function () {
-  document.getElementById('main-image').src = imgArray[1]
-}
+// document.getElementById('img-button1').onclick = function () {
+//   document.getElementById('main-image').src = imgArray[0]
+// }
+// document.getElementById('img-button2').onclick = function () {
+//   document.getElementById('main-image').src = imgArray[1]
+// }
 
-document.getElementById('img-button3').onclick = function () {
-  document.getElementById('main-image').src = imgArray[2]
-}
-document.getElementById('img-button4').onclick = function () {
-  document.getElementById('main-image').src = imgArray[3]
-}
+// document.getElementById('img-button3').onclick = function () {
+//   document.getElementById('main-image').src = imgArray[2]
+// }
+// document.getElementById('img-button4').onclick = function () {
+//   document.getElementById('main-image').src = imgArray[3]
+// }
 
 // Scroll Reveal Animation
 

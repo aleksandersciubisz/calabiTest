@@ -97,6 +97,7 @@ header {
   font-family: var(--headline-font);
   color: var(--light-color);
   text-transform: uppercase;
+  text-shadow: -2px 2px 0px rgba(0, 0, 0, 1);
 }
 
 h1 {
@@ -131,6 +132,7 @@ p {
   width: 100%;
   letter-spacing: 0.05em;
   margin: 5px 0px;
+  text-shadow: -2px 2px 0px rgba(0, 0, 0, 1);
 }
 
 .italic {
@@ -177,9 +179,13 @@ p {
   padding: 1em;
   z-index: 1;
 }
-/*################################# SECTION 1 #################################*/
+/*################################# SECTION 0 #################################*/
 
-#section1 {
+#section0,
+#section1,
+#section2,
+#section3,
+#section5 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
@@ -188,31 +194,63 @@ p {
   height: auto;
 }
 
-#section1 > div {
+#section0 > div,
+#section1 > div,
+#section2 > div,
+#section3 > div,
+#section5 > div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  align-self: stretch;
 
   height: auto;
-  min-height: 30vh;
+  min-height: 31vh;
   padding: 10px;
 
   opacity: 0.9;
-  transition: all 0.5s ease-in;
+  transition: all 0.3s ease-in;
 
   background-size: cover;
   background-attachment: fixed;
 }
 
-#section1 img {
+#section0 > div:hover,
+#section1 > div:hover,
+#section2 > div:hover,
+#section3 > div:hover,
+#section0 > div:hover {
+  opacity: 1;
+  transform: scale(0.98);
+}
+
+#section0 img,
+#section5 img {
   max-height: 120px;
   width: auto;
 }
 
+/* ---- grid manipulation ----*/
+#section0 > div:nth-of-type(1) {
+  grid-column: 1 / 3;
+}
+
+#section0 > div:nth-of-type(2) {
+  grid-column: 1 / 3;
+}
+
+/*################################# SECTION 1 #################################*/
+
+/* ---- grid manipulation ----*/
 #section1 > div:nth-of-type(1) {
   grid-column: 1 / 3;
+}
+
+#section1 > div:nth-of-type(2) {
+  grid-column: 1;
+  grid-row: 2 / 4;
 }
 
 /* #section1 {
@@ -262,6 +300,15 @@ p {
 } */
 
 /*################################# SECTION 2 #################################*/
+/* ---- grid manipulation ----*/
+#section2 > div:nth-of-type(1) {
+  grid-column: 1 / 3;
+}
+
+#section2 > div:nth-of-type(2) {
+  grid-column: 1;
+  grid-row: 2 / 4;
+}
 
 /* #section2 {
   display: grid;
@@ -305,6 +352,15 @@ p {
 } */
 
 /*################################# SECTION 3 #################################*/
+/* ---- grid manipulation ----*/
+#section3 > div:nth-of-type(1) {
+  grid-column: 1 / 3;
+}
+
+#section3 > div:nth-of-type(2) {
+  grid-column: 1;
+  grid-row: 2 / 4;
+}
 
 /* 
 #section3 {
@@ -352,6 +408,106 @@ p {
 } */
 
 /*################################# SECTION 4 #################################*/
+#section4 {
+  height: auto;
+  min-height: 100vh;
+  padding: var(--header-height) 20px;
+  justify-content: flex-start;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  margin: -10px 0 0 0;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: auto;
+  min-width: 300px;
+  margin: 12vh 15px;
+  height: auto;
+  min-height: 200px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: var(--black-color);
+  color: white;
+  transform: rotateY(180deg);
+  text-align: left;
+}
+
+/* .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: auto;
+  min-height: 60vh;
+
+  margin: 5px 0;
+
+  border: solid 1px white;
+}
+
+.flex-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 280px;
+  width: 280px;
+  margin: 5px;
+
+  opacity: 0.9;
+  transition: all 0.3s ease-in;
+
+  border: solid 1px red;
+}
+
+.flex-card:hover {
+  transform: scale(1.05);
+  opacity: 1;
+} */
+
 /* 
 #section4 {
   display: grid;
@@ -409,6 +565,93 @@ p {
   grid-column: 2/4;
   grid-row: 4/5;
 } */
+
+/*################################# SECTION 5 #################################*/
+
+#section5 {
+  height: auto;
+  min-height: 50vh;
+}
+
+#section5 > div {
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+
+  margin: 2px;
+  border: solid 1px red;
+}
+
+/*------ Contact Form --------*/
+.feedback-input {
+  color: var(--light-color);
+  font-family: var(--text-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--black-color);
+  border: 2px solid var(--mars-color-dark);
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid var(--red-color);
+}
+
+textarea {
+  height: 180px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type='submit'] {
+  font-family: var(--headline-font);
+  width: 100%;
+  background: var(--black-color);
+  border: 2px solid var(--mars-color-dark);
+  cursor: pointer;
+  color: var(--light-color);
+  font-size: var(--normal-font-size);
+  padding: 10px 0;
+  transition: all 0.3s;
+  margin-top: -4px;
+}
+[type='submit']:hover {
+  color: var(--mars-color-dark);
+  background: var(--light-color);
+}
+.social {
+  font-size: var(--h1-size);
+  margin: 15px;
+}
+
+.social:hover {
+  transform: scale(0.95);
+  transition: 0.3s;
+}
+
+.ft {
+  align-self: flex-end;
+}
+
+.ft:hover {
+  transform: scale(0.95);
+  transition: 0.3s;
+  color: var(--mars-color-alt);
+}
+
+#section5 > div:nth-of-type(1) {
+  grid-column: 1;
+  grid-row: 1 / 4;
+}
+
+#section5 > div:nth-of-type(3) {
+  grid-column: 2;
+  grid-row: 2 / 4;
+}
 
 /*################################# FOOTER #################################*/
 .scrollup {
