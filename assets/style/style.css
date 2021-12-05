@@ -146,6 +146,44 @@ p {
   text-align: left;
 }
 
+/*################################# OWL CAROUSEL #################################*/
+/* .carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  z-index: 5;
+}
+
+.owl-dots {
+  display: none;
+}
+
+.owl-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.owl-item img {
+  height: 100%;
+  max-height: 200px;
+  width: auto;
+  box-shadow: 0.03em 0 0 rgba(255, 0, 0, 0.75),
+    -0.02em -0.03em 0 rgba(0, 255, 0, 0.75),
+    0.02em 0.03em 0 rgba(0, 0, 255, 0.75);
+}
+
+.owl-theme .owl-nav {
+  color: var(--light-color);
+  align-self: flex-start;
+  margin-top: 0;
+} */
+
 /*################################# HOME SECTION #################################*/
 
 #home {
@@ -249,6 +287,11 @@ p {
 #section1 > div:nth-of-type(2) {
   grid-column: 1;
   grid-row: 2 / 4;
+}
+
+#section1 > div:nth-of-type(8) {
+  grid-row: 5 / 7;
+  grid-column: 2;
 }
 
 /* #section1 {

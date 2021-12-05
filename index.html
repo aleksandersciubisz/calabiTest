@@ -28,6 +28,10 @@
     <!-- Glitches & computing effects -->
     <link rel="stylesheet" href="/assets/style/cyberpunk.css" />
 
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="assets/style/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/style/owl.theme.default.min.css" />
+
     <title>FLEXICON</title>
   </head>
   <body>
@@ -83,8 +87,8 @@
       <section id="section0">
         <!-- Transparent part -->
         <div>
-          <p>Each journey into the unknown begins with the question:</p>
-          <h2 class="text-glitch">How to survive?</h2>
+          <p>Our journey began with one question:</p>
+          <h2 class="text-glitch">How to survive in unknown?</h2>
         </div>
 
         <div>
@@ -101,7 +105,7 @@
         </div>
 
         <div>
-          <h3 class="text-glitch left">flexicon provides reliable shelter</h3>
+          <h2 class="text-glitch left">flexicon provides reliable shelter</h2>
         </div>
       </section>
 
@@ -134,15 +138,30 @@
         </div>
 
         <!-- Earth solution part -->
-        <div id="solution1"></div>
-
-        <div></div>
-
-        <div>
-          <p>In this section, we can introduce and explain an arctic shelter</p>
+        <div id="solution1">
+          <h3 class="left">Starting with the prototype</h3>
         </div>
 
-        <div></div>
+        <div
+          style="
+            background: url('/assets/img/carousel/prototype1.jpeg') center
+              no-repeat;
+          "
+        ></div>
+
+        <div>
+          <h2 class="left">through 3D printing</h2>
+          <p class="left">Layer by layer, we are looking for new solutions</p>
+        </div>
+
+        <div>
+          <video
+            src="assets/img/carousel/3dPrint.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
 
         <div></div>
 
@@ -582,5 +601,30 @@
 
     <!-- Main Java Scrip Source-->
     <script src="assets/js/script.js"></script>
+
+    <!-- JQuery -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+    <!-- OWL Carousel -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+    <!-- OWL Carousel setup script-->
+    <script>
+      $('.owl-carousel').owlCarousel({
+        items: 1,
+        stagePadding: 0,
+        loop: true,
+        margin: 3,
+        nav: true,
+        center: true,
+        smartSpeed: 900,
+        stagePadding: 0,
+
+        navText: [
+          '<i class="ri-arrow-left-s-line"></i>',
+          '<i class="ri-arrow-right-s-line"></i>',
+        ],
+      })
+    </script>
   </body>
 </html>
