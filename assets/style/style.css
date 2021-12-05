@@ -126,8 +126,9 @@ h3 {
 }
 
 p {
-  font-family: (var(--text-font));
+  font-family: var(--text-font);
   font-size: var(--normal-font);
+  font-weight: thin;
   color: var(--light-color);
   width: 100%;
   letter-spacing: 0.05em;
