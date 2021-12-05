@@ -25,25 +25,21 @@ function scrollUp() {
 window.addEventListener('scroll', scrollUp)
 
 var imgArray = [
-  'assets/img/a1.jpg',
-  'assets/img/a2.jpg',
-  'assets/img/a3.jpg',
-  'assets/img/a4.jpg',
+  'assets/img/carousel/3dPrint.mp4',
+  'assets/img/carousel/3dPrint2.mp4',
+  'assets/img/carousel/3dPrint3.mp4',
 ]
 
-// document.getElementById('img-button1').onclick = function () {
-//   document.getElementById('main-image').src = imgArray[0]
-// }
-// document.getElementById('img-button2').onclick = function () {
-//   document.getElementById('main-image').src = imgArray[1]
-// }
+document.getElementById('img-button1').onclick = function () {
+  document.getElementById('main-image').src = imgArray[0]
+}
+document.getElementById('img-button2').onclick = function () {
+  document.getElementById('main-image').src = imgArray[1]
+}
 
-// document.getElementById('img-button3').onclick = function () {
-//   document.getElementById('main-image').src = imgArray[2]
-// }
-// document.getElementById('img-button4').onclick = function () {
-//   document.getElementById('main-image').src = imgArray[3]
-// }
+document.getElementById('img-button3').onclick = function () {
+  document.getElementById('main-image').src = imgArray[2]
+}
 
 // Scroll Reveal Animation
 
